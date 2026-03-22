@@ -21,4 +21,13 @@ func InitDatabase() {
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
 	dbname := os.Getenv("DB_NAME")
+	// Format DSN (Data Source Name) untuk MySQL
+	// Format: user:pass@tcp(host:port)/dbname?params
+	dsn := fmt.Sprintf(
+	"%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+	user, password, host, port, dbname,
+	)
+	// Konfigurasi GORM
+	gormConfig := &gorm.Config{
+	Logger: logger.Default.LogMode(logger.Info), // Log semua query SQL
 	}
