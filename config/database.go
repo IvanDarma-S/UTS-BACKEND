@@ -43,3 +43,16 @@ func InitDatabase() {
 	if err != nil {
 		log.Fatalf("Gagal mendapatkan sql.DB: %v", err)
 	}
+	sqlDB.SetMaxOpenConns(25) // Maksimal 25 koneksi terbuka
+	sqlDB.SetMaxIdleConns(10) // Maksimal 10 koneksi idle
+	// AutoMigrate: buat/update tabel sesuai struct model
+	// GORM akan buat tabel jika belum ada
+	err = DB.AutoMigrate(
+		&models.User{},
+		&models.Product{},
+	)
+	if err != nil {
+		log.Fatalf("AutoMigrate gagal: %v", err)
+	}
+	log.Println("Database terhubung dan tabel sudah di-migrate")
+}
