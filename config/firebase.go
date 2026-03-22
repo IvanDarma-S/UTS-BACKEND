@@ -19,3 +19,10 @@ import (
 	if err != nil {
 	log.Fatalf("Gagal init Firebase: %v", err)
 }
+// Dapatkan Firebase Auth client
+	FirebaseAuth, err = app.Auth(context.Background())
+	if err != nil {
+	log.Fatalf("Gagal mendapatkan Firebase Auth client: %v", err)
+	}
+	log.Println("Firebase Admin SDK berhasil diinisialisasi")
+}
