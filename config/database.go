@@ -24,10 +24,22 @@ func InitDatabase() {
 	// Format DSN (Data Source Name) untuk MySQL
 	// Format: user:pass@tcp(host:port)/dbname?params
 	dsn := fmt.Sprintf(
-	"%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-	user, password, host, port, dbname,
+		"%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+		user, password, host, port, dbname,
 	)
 	// Konfigurasi GORM
 	gormConfig := &gorm.Config{
-	Logger: logger.Default.LogMode(logger.Info), // Log semua query SQL
+		Logger: logger.Default.LogMode(logger.Info), // Log semua query SQL
+	}
+	// Buka koneksi
+	var err error
+	DB, err = gorm.Open(mysql.Open(dsn), gormConfig)
+	if err != nil {
+		log.Fatalf("Gagal koneksi ke database: %v", err)
+	}
+
+	// Setup connection pool
+	sqlDB, err := DB.DB()
+	if err != nil {
+		log.Fatalf("Gagal mendapatkan sql.DB: %v", err)
 	}
