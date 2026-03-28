@@ -11,9 +11,17 @@ import (
 
 func main() {
 	// 1. Load environment variables dari .env file
-	if err := godotenv.Load(); err != nil {
+	err := godotenv.Load() // Tanpa argumen, dia cari file ".env" di folder yang sama
+	if err != nil {
 		log.Println("File .env tidak ditemukan, menggunakan environment variable sistem")
 	}
+
+	// 2. Baru ambil variabelnya
+	secret := os.Getenv("JWT_SECRET")
+	credPath := os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")
+
+	log.Println("JWT_SECRET:", secret)
+	log.Println("GOOGLE_APPLICATION_CREDENTIALS:", credPath)
 	// 2. Inisialisasi Firebase Admin SDK
 	config.InitFirebase()
 	// 3. Inisialisasi database + AutoMigrate
