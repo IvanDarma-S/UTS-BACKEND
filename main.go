@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/agrahafiz13/gin-firebase-backend/config"
-	"github.com/agrahafiz13/gin-firebase-backend/routes"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/config"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/routes"
 	"github.com/joho/godotenv"
 )
 

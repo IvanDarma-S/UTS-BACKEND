@@ -1,4 +1,4 @@
-module github.com/agrahafiz13/gin-firebase-backend
+module github.com/IvanDarma-S/apps_marketplace_integration_backend
 
 go 1.26.1
 

@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"github.com/agrahafiz13/gin-firebase-backend/models"
-	"github.com/agrahafiz13/gin-firebase-backend/repositories"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/repositories"
 )
 
 type ProductService struct {

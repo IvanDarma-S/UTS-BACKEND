@@ -2,6 +2,7 @@
 # .gitignore
 .env
 firebase-service-account.json
+golang-firebase-dae7e-firebase-adminsdk-fbsvc-04ad860f3f.json
 *.exe
 *.test
 /tmp

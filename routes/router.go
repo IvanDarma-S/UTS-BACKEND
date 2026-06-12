@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/agrahafiz13/gin-firebase-backend/handlers"
-	"github.com/agrahafiz13/gin-firebase-backend/middleware"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/handlers"
+	"github.com/IvanDarma-S/apps_marketplace_integration_backend/middleware"
 	"github.com/gin-gonic/gin"
 )
 
