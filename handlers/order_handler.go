@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,10 +12,8 @@ import (
 
 type CheckoutRequest struct {
 	ShippingAddress string `json:"shipping_address"`
-
-	Notes string `json:"notes"`
-
-	PaymentMethod string `json:"payment_method"`
+	Notes           string `json:"notes"`
+	PaymentMethod   string `json:"payment_method"`
 }
 
 
@@ -54,5 +53,46 @@ func Checkout(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"message": "Checkout success",
 		"data":    order,
+	})
+}
+
+
+func GetMyOrders(c *gin.Context) {
+	userID := uint(1)
+
+	orders, err := services.GetMyOrders(userID)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"message": err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": orders,
+	})
+}
+
+// ================= GET ORDER DETAIL =================
+
+func GetOrderDetail(c *gin.Context) {
+	idParam := c.Param("id")
+
+	var id uint
+
+	fmt.Sscanf(idParam, "%d", &id)
+
+	order, err := services.GetOrderDetail(id)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"message": err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": order,
 	})
 }

@@ -94,3 +94,20 @@ func Checkout(
 
 	return order, nil
 }
+// get orders by user id
+
+func GetMyOrders(
+	userID uint,
+) ([]models.Order, error) {
+
+	return repositories.GetOrdersByUserID(userID)
+}
+
+// get order detail by order id
+
+func GetOrderDetail(
+	id uint,
+) (*models.Order, error) {
+
+	return repositories.GetOrderByID(id)
+}
