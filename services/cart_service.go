@@ -67,3 +67,13 @@ func RemoveCartItem(
 
 	return repositories.DeleteCartItem(id)
 }
+
+
+func ClearCart(
+	userID uint,
+) error {
+
+	return repositories.ClearCartByUserID(
+		userID,
+	)
+}
