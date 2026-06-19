@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/handlers"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/middleware"
+	"github.com/IvanDarma-S/UTS_BACKEND/handlers"
+	"github.com/IvanDarma-S/UTS_BACKEND/middleware"
 	"github.com/gin-gonic/gin"
 )
 

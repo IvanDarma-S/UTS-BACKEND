@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/config"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/config"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
 	"github.com/joho/godotenv"
 )
 

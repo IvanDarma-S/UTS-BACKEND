@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/config"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/repositories"
 )
 
 func AddToCart(

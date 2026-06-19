@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/services"
+	"github.com/IvanDarma-S/UTS_BACKEND/services"
 )
 
 type AddCartRequest struct {

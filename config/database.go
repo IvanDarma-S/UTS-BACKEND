@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

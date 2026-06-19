@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/config"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/config"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
 )
 
 func AddToCart(item *models.CartItem) error {

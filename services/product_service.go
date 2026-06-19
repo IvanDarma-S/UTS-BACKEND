@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/repositories"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/repositories"
 )
 
 type ProductService struct {

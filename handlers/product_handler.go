@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/models"
-	"github.com/IvanDarma-S/apps_marketplace_integration_backend/services"
+	"github.com/IvanDarma-S/UTS_BACKEND/models"
+	"github.com/IvanDarma-S/UTS_BACKEND/services"
 	"github.com/gin-gonic/gin"
 )
 
